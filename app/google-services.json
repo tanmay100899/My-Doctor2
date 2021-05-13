@@ -1,0 +1,114 @@
+{
+  "project_info": {
+    "project_number": "941741910503",
+    "firebase_url": "https://doctorappoint-1bec7-default-rtdb.firebaseio.com",
+    "project_id": "doctorappoint-1bec7",
+    "storage_bucket": "doctorappoint-1bec7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941741910503:android:038f0316bdaffb702c7542",
+        "android_client_info": {
+          "package_name": "com.example.aman.hospitalappointy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "941741910503-jvn34ug0jgeqnbvrmbb8ov1rn9ou59n9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUL4SoyRCvARoC5TqxXgHz4wLmkw6tJD0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "941741910503-jvn34ug0jgeqnbvrmbb8ov1rn9ou59n9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941741910503:android:a461b914337eed282c7542",
+        "android_client_info": {
+          "package_name": "com.id.drapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "941741910503-r7709a2ccelcnlh0p89omalh83tds9dm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.id.drapp",
+            "certificate_hash": "0d42afef1bae0986389c61f9230adb1510930703"
+          }
+        },
+        {
+          "client_id": "941741910503-jvn34ug0jgeqnbvrmbb8ov1rn9ou59n9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUL4SoyRCvARoC5TqxXgHz4wLmkw6tJD0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "941741910503-jvn34ug0jgeqnbvrmbb8ov1rn9ou59n9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941741910503:android:645dd621c1a407a82c7542",
+        "android_client_info": {
+          "package_name": "com.themebd.mydoctorfinal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "941741910503-tc8lb46inon08puuv2fnsma66n0jc97i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.themebd.mydoctorfinal",
+            "certificate_hash": "0d42afef1bae0986389c61f9230adb1510930703"
+          }
+        },
+        {
+          "client_id": "941741910503-jvn34ug0jgeqnbvrmbb8ov1rn9ou59n9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUL4SoyRCvARoC5TqxXgHz4wLmkw6tJD0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "941741910503-jvn34ug0jgeqnbvrmbb8ov1rn9ou59n9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
