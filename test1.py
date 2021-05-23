@@ -1,8 +1,9 @@
 from google.cloud import speech_v1p1beta1 as speech
+from fpdf import FPDF
 
 client = speech.SpeechClient()
 
-speech_file = "D:/New folder/doctor.wav"
+speech_file = "D:/New folder/s3.wav"
 
 with open(speech_file, "rb") as audio_file:
     content = audio_file.read()
@@ -37,21 +38,45 @@ for word_info in words_info:
     elif (word_info.speaker_tag==2):
         speaker2_transcript=speaker2_transcript+word_info.word+' '
 
-print("speaker1: '{}'".format(speaker1_transcript))
-print("speaker2: '{}'".format(speaker2_transcript))
+s1="speaker1: '{}'".format(speaker1_transcript)
+s2="speaker2: '{}'".format(speaker2_transcript)
+s3=s1+s2
 # speaker2= '{}'.format(speaker2_transcript)
-# med=["Crocin","Disprin","Paracetamol"]
-# print(type(speaker2))
-# r1=[]
-# for i in range(len(speaker2)):
-#     if med[i] in speaker2:
-#         r1.append(med[i])
-# print(r1)
+med1=[]
+day1=[]
+med=["Crocin","Disprin","Paracetamol","Dolo 650"]
+for i in range(len(med)):
+    if med[i] in s3:
+        med1.append(med[i])
+l1=s3.split()
+for i in range(len(l1)):
+    if "days" in l1[i] or "times" in l1[i]:
+        day1.append(l1[i-1])
+print(day1)
 
 
-# print(speaker1_transcript,word_info.speaker_tag)
-# print(speaker2_transcript,word_info.speaker_tag)        
+pdf = FPDF()
+pdf.add_page()
+pdf.ln(50)
+pdf.set_font("Arial","B", size=20)
+epw = pdf.w - 2*pdf.l_margin
+pdf.cell(200, 10.0, txt="Demo Medical Prescription", ln=1, align="C")
+# Effective page width, or just epw
+# Set column width to 1/4 of effective page width to distribute content 
+# evenly across table and page
+col_width = epw/4
+print(med1)
+print(day1)
 
-    # print(
-    #     u"word: '{}', speaker_tag: {}".format(word_info.word, word_info.speaker_tag)
-    # )
+data=[['SrNo','Medicine','duration','times']]
+for i in range(len(med1)):
+	data.append([i+1,med1[i],day1[i*2],day1[(i*2)+1]])
+pdf.ln(10)
+pdf.set_font("Arial", size=10)
+th = pdf.font_size
+for row in data:
+    for datum in row:
+        pdf.cell(col_width, 4*th, str(datum), border=0)
+ 
+    pdf.ln(4*th)
+pdf.output("demo8.pdf")
